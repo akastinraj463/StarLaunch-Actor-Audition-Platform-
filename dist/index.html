@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>StarLaunch | Your Acting Journey Starts Here</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-dim": "#131313",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "on-secondary-fixed": "#1b1b1b",
+                    "on-secondary-fixed-variant": "#474746",
+                    "on-primary-fixed-variant": "#5b4300",
+                    "inverse-primary": "#785a00",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-tertiary-container": "#5c5d5e",
+                    "error": "#ffb4ab",
+                    "on-primary-container": "#765900",
+                    "tertiary-fixed": "#e2e2e2",
+                    "surface-container-low": "#1c1b1b",
+                    "surface-container-high": "#2a2a2a",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "tertiary-container": "#d6d7d7",
+                    "inverse-on-surface": "#313030",
+                    "tertiary": "#f3f3f3",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "surface-container-highest": "#353534",
+                    "surface-container": "#201f1f",
+                    "surface-variant": "#353534",
+                    "secondary-container": "#474746",
+                    "on-tertiary": "#2f3131",
+                    "primary-container": "#ffd166",
+                    "secondary": "#c8c6c5",
+                    "secondary-fixed": "#e5e2e1",
+                    "on-surface": "#e5e2e1",
+                    "on-secondary-container": "#b7b5b4",
+                    "outline-variant": "#4e4636",
+                    "outline": "#9a8f7d",
+                    "on-secondary": "#313030",
+                    "on-surface-variant": "#d1c5b1",
+                    "primary-fixed-dim": "#edc157",
+                    "on-primary": "#3f2e00",
+                    "primary": "#fff2dc",
+                    "on-primary-fixed": "#251a00",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "surface-tint": "#edc157",
+                    "error-container": "#93000a",
+                    "surface": "#131313",
+                    "on-error": "#690005",
+                    "on-error-container": "#ffdad6",
+                    "surface-bright": "#3a3939",
+                    "primary-fixed": "#ffdf9b",
+                    "on-background": "#e5e2e1",
+                    "background": "#131313",
+                    "inverse-surface": "#e5e2e1"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-padding": "24px",
+                    "margin-desktop": "48px",
+                    "unit": "8px",
+                    "gutter": "16px",
+                    "max-width": "1440px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "title-md": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "headline-lg-mobile": ["Inter"]
+            },
+            "fontSize": {
+                    "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "500"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+  <script type="module" crossorigin src="/assets/index-oIBSLx7g.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-9cVEbrym.css">
+</head>
+<body class="selection:bg-primary-container selection:text-on-primary-container bg-[#0F0F0F] text-[#e5e2e1] font-['Inter',sans-serif]">
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-[#131313]/70 backdrop-blur-3xl shadow-2xl border-b border-white/10">
+        <div class="flex justify-between items-center px-container-padding max-w-max-width mx-auto h-20">
+            <div class="font-display-lg text-display-lg font-bold text-primary tracking-tighter cursor-pointer" onclick="window.location.reload()">StarLaunch</div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors pb-1" href="#featured-auditions">Auditions</a>
+                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#categories">Categories</a>
+                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#success-stories">Success Stories</a>
+                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#pricing">Pricing</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors hover:bg-white/5 px-4 py-2 rounded-lg" data-action="login">Login</button>
+                <button class="bg-[#ffd166] text-[#3f2e00] px-6 py-2.5 rounded-lg font-label-caps text-label-caps font-bold scale-95 active:scale-90 transition-transform" data-action="join">Join Now</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#0F0F0F]/60 to-[#0F0F0F] z-10"></div>
+            <div class="w-full h-full bg-cover bg-center animate-subtle-zoom" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDoMBjWlBM35iSdkLHKCtBzniDbHswAeoSawRWrQBTn8JVQZezBcN1FxTgemSi0y82p-HWoWedX7MvOox6tSDJkLXL3whBXFPx-oY6V0M-qXck1TSFjUEPHQgTa9iILszJMtI-EgZMMkLo3cOBGMSCZ_l7uZeqUgaICPGr3KY5rQnkDb5qc9E9busbRKxKpdt3o2Ta7J2KtrXSiTZQinNC69zETz-Rb_HAQoX-s0a4XmT02HvQb9-N1qaZvfoWEi3YrYEmY-bXonuXy')"></div>
+        </div>
+        <div class="relative z-20 text-center px-container-padding max-w-4xl mx-auto mt-20">
+            <h1 class="font-display-lg text-[56px] md:text-[84px] leading-tight text-white mb-6 tracking-tight">Your Acting Journey <br/><span class="text-primary-container">Starts Here</span></h1>
+            <p class="font-body-lg text-title-md text-on-surface-variant mb-10 max-w-2xl mx-auto">Connect with verified casting directors and top-tier production houses. Your professional acting profile, reimagined with cinematic excellence.</p>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6 mb-16">
+                <button class="w-full md:w-auto bg-[#ffd166] text-[#3f2e00] px-10 py-5 rounded-full font-title-md font-bold hover:brightness-110 transition-all shadow-xl gold-glow" data-action="login">Join as Actor</button>
+                <button class="w-full md:w-auto glass-card text-white px-10 py-5 rounded-full font-title-md font-medium hover:bg-white/10 transition-all" data-action="login">Post an Audition</button>
+            </div>
+            <div class="grid grid-cols-3 gap-8 md:gap-16 pt-12 border-t border-white/10">
+                <div>
+                    <div class="font-display-lg text-primary-container text-headline-lg">15k+</div>
+                    <div class="font-label-caps text-label-caps text-on-surface-variant">Verified Actors</div>
+                </div>
+                <div>
+                    <div class="font-display-lg text-primary-container text-headline-lg">1.2k+</div>
+                    <div class="font-label-caps text-label-caps text-on-surface-variant">Casting Directors</div>
+                </div>
+                <div>
+                    <div class="font-display-lg text-primary-container text-headline-lg">5k+</div>
+                    <div class="font-label-caps text-label-caps text-on-surface-variant">Active Auditions</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="py-margin-desktop bg-[#131313]">
+        <div class="max-w-max-width mx-auto px-container-padding">
+            <h2 class="font-headline-lg text-headline-lg text-white mb-12 text-center md:text-left">Browse by <span class="text-primary-container">Category</span></h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
+                <div class="glass-card p-8 rounded-3xl hover:bg-primary-container/10 transition-all group cursor-pointer text-center" onclick="showToast('Filtering for Movies is active.')">
+                    <span class="material-symbols-outlined text-4xl text-primary-container mb-4 group-hover:scale-110 transition-transform">movie</span>
+                    <h3 class="font-title-md text-title-md text-white">Movies</h3>
+                </div>
+                <div class="glass-card p-8 rounded-3xl hover:bg-primary-container/10 transition-all group cursor-pointer text-center" onclick="showToast('Filtering for Web Series is active.')">
+                    <span class="material-symbols-outlined text-4xl text-primary-container mb-4 group-hover:scale-110 transition-transform">live_tv</span>
+                    <h3 class="font-title-md text-title-md text-white">Web Series</h3>
+                </div>
+                <div class="glass-card p-8 rounded-3xl hover:bg-primary-container/10 transition-all group cursor-pointer text-center" onclick="showToast('Filtering for TV Shows is active.')">
+                    <span class="material-symbols-outlined text-4xl text-primary-container mb-4 group-hover:scale-110 transition-transform">tv</span>
+                    <h3 class="font-title-md text-title-md text-white">TV Shows</h3>
+                </div>
+                <div class="glass-card p-8 rounded-3xl hover:bg-primary-container/10 transition-all group cursor-pointer text-center" onclick="showToast('Filtering for Commercials is active.')">
+                    <span class="material-symbols-outlined text-4xl text-primary-container mb-4 group-hover:scale-110 transition-transform">campaign</span>
+                    <h3 class="font-title-md text-title-md text-white">Commercials</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Auditions (Asymmetric Layout) -->
+    <section id="featured-auditions" class="py-margin-desktop bg-[#131313]">
+        <div class="max-w-max-width mx-auto px-container-padding">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                <div>
+                    <h2 class="font-headline-lg text-headline-lg text-white mb-4">Featured Auditions</h2>
+                    <p class="font-body-lg text-on-surface-variant">High-profile projects currently scouting for talent.</p>
+                </div>
+                <button class="font-label-caps text-label-caps text-primary border-b border-primary" onclick="showToast('Casting feed updated.')">View All Casting Calls</button>
+            </div>
+            
+            <!-- Dynamic container populated by JS -->
+            <div id="auditions-grid" class="grid grid-cols-1 md:grid-cols-12 gap-8">
+                <!-- Fallback content matches original design -->
+                <!-- Large Card (Col 7) -->
+                <div class="md:col-span-7 glass-card rounded-[32px] overflow-hidden group flex flex-col justify-end min-h-[400px] relative">
+                    <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700 z-0" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDT4paOf2AJIY_Az9aXYrHF8dGi8aBcAX_NY6Sc07-p4sVMhGSiQPuOI9EMY0f4augF1-c5Gnb4NH4M1yHxCEi0AeI1_jjh3vJXjr-s-DO5TLu3oJS-Qmd88Z6_Ez4BdJ8Ptp_bQ0aBeNjIYCeBEo_IZjK3VBwTau3hPKk_iENZTE642W_SSCuyb3U5FBGm8FVB7xTM0kzGH15uiloUBl0PdLMn4fOM-8StE_F6jhfyrRHWlbNLl7I8uz0TlnzB0zWijXzluUABJJn0')"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10"></div>
+                    <div class="p-8 w-full relative z-20">
+                        <span class="bg-primary-container text-on-primary-container font-label-caps text-label-caps px-3 py-1 rounded-full mb-4 inline-block">Movie</span>
+                        <h3 class="font-headline-lg text-headline-lg text-white mb-2">The Silent Horizon</h3>
+                        <div class="flex flex-wrap gap-4 text-on-surface-variant font-body-sm mb-6">
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">person</span> Lead Actor</span>
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">location_on</span> Los Angeles, CA</span>
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> Dec 15 Deadline</span>
+                        </div>
+                        <button onclick="window.location.href='audition-details.html'" class="bg-white text-black px-8 py-3 rounded-xl font-label-caps text-label-caps font-bold hover:bg-primary-container transition-colors">Apply Now</button>
+                    </div>
+                </div>
+                
+                <!-- Stack (Col 5) -->
+                <div class="md:col-span-5 flex flex-col gap-8">
+                    <div class="glass-card rounded-[32px] overflow-hidden flex flex-row group h-1/2 min-h-[180px]">
+                        <div class="w-32 md:w-48 bg-cover bg-center shrink-0 group-hover:scale-110 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDNwjJWJ8Hda8qCGSE8fs38Ks29oe7u0lgz7c7PXnmp7MVCLceAW0sRTDutqdqm8spILpYw7fzYbKNHiRX_KpL_cXsNvjD9LECBNd1fJ-DPa1sQmEV9s7158tmKchQW8q1HEKNTqOmI88jRG4UcjN1e58Y3FOlmTwh6hXHIim87EkiTLkMkUaL5e39AKC7cdEUY_JU7wv5VQIFPm4EfwkObQkfZt_uiiD0bVZToKmWz94hno1R03pPy2DUD_FFQdZBBNs9IT2C6fWdr')"></div>
+                        <div class="p-6 flex flex-col justify-center flex-1">
+                            <h3 class="font-title-md text-title-md text-white mb-1">Aura Fragrance</h3>
+                            <p class="font-body-sm text-on-surface-variant mb-4">TV Commercial · Lead Model</p>
+                            <button onclick="quickApply('aura-fragrance')" class="font-label-caps text-label-caps text-primary self-start hover:text-white transition-colors">Quick Apply</button>
+                        </div>
+                    </div>
+                    <div class="glass-card rounded-[32px] overflow-hidden flex flex-row group h-1/2 min-h-[180px]">
+                        <div class="w-32 md:w-48 bg-cover bg-center shrink-0 group-hover:scale-110 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB12XxU6l-P6f6C1ExerjyYGbchw2jmdbcjC1EpgvKiJVfetsgaiXabsQT2PaA8CJLLnxmNUpOaowRMs7Rx7qJZzjMMev73RWtcK7ipsfhJV9IQJX2XiPpPzwHpOkxm0qpONyH7vdjijlMPypI9uFS6v_tdCL_kmzTm2Icmrp530Y7zhkK3tNRWY_sR2eKGD_xd5jDvFGyRwNCOl8Hif5cibffzvyKwfwLLO0TUEWZ4-aBIfWbM9r9r_9cMnEUPzacf2jQPeFGRDxd_')"></div>
+                        <div class="p-6 flex flex-col justify-center flex-1">
+                            <h3 class="font-title-md text-title-md text-white mb-1">Nightfall Files</h3>
+                            <p class="font-body-sm text-on-surface-variant mb-4">Web Series · Recurring Supporting</p>
+                            <button onclick="quickApply('nightfall-files')" class="font-label-caps text-label-caps text-primary self-start hover:text-white transition-colors">Quick Apply</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Section (Bento Grid) -->
+    <section class="py-margin-desktop bg-[#131313]">
+        <div class="max-w-max-width mx-auto px-container-padding">
+            <h2 class="font-headline-lg text-headline-lg text-white mb-16 text-center">Built for <span class="text-primary-container">Next-Gen</span> Talent</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="md:col-span-2 glass-card p-10 rounded-[40px] flex flex-col md:flex-row items-center gap-8">
+                    <div class="flex-1">
+                        <div class="w-14 h-14 bg-primary-container/20 rounded-2xl flex items-center justify-center mb-6">
+                            <span class="material-symbols-outlined text-primary-container text-3xl">verified_user</span>
+                        </div>
+                        <h3 class="font-headline-lg text-headline-lg text-white mb-4">Verified Casting Calls</h3>
+                        <p class="font-body-lg text-on-surface-variant">Every audition on StarLaunch is manually verified by our team. No more spam or ghosting—just real opportunities with real producers.</p>
+                    </div>
+                    <div class="w-full md:w-64 h-48 bg-surface-container rounded-3xl border border-white/5 flex items-center justify-center">
+                        <div class="space-y-3 w-2/3">
+                            <div class="h-4 bg-white/10 rounded w-full"></div>
+                            <div class="h-4 bg-white/10 rounded w-5/6"></div>
+                            <div class="h-4 bg-[#ffd166]/20 rounded w-4/6"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-card p-10 rounded-[40px] flex flex-col">
+                    <div class="w-14 h-14 bg-primary-container/20 rounded-2xl flex items-center justify-center mb-6">
+                        <span class="material-symbols-outlined text-primary-container text-3xl">auto_awesome</span>
+                    </div>
+                    <h3 class="font-headline-lg text-headline-lg text-white mb-4">AI Portfolio Builder</h3>
+                    <p class="font-body-lg text-on-surface-variant flex-1">Upload your clips and let our AI generate a cinematic showreel highlight that grabs attention in seconds.</p>
+                </div>
+                <div class="glass-card p-10 rounded-[40px] flex flex-col">
+                    <div class="w-14 h-14 bg-primary-container/20 rounded-2xl flex items-center justify-center mb-6">
+                        <span class="material-symbols-outlined text-primary-container text-3xl">groups</span>
+                    </div>
+                    <h3 class="font-headline-lg text-headline-lg text-white mb-4">Direct Messaging</h3>
+                    <p class="font-body-lg text-on-surface-variant flex-1">Communicate directly with casting directors through our secure, pro-grade encrypted messaging platform.</p>
+                </div>
+                <div class="md:col-span-2 glass-card p-10 rounded-[40px] flex flex-col md:flex-row items-center gap-8">
+                    <div class="w-full md:w-80 h-56 bg-cover bg-center rounded-3xl border border-white/5" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAvW7HtHekeJMpSrjTix2lMd3tphmYvv0DncHZ3pUfdY9nRbDzfmcwVIhfjzEyY03xoR3TKbF3spVuDY6G52e96fKG_2U0hyPPmXyxc9-qI2EivLLawEYbirK49v5IieRhSbVQKqQqbX7TPsL-rJEZDdcvYs7cePTVMzBqr1RLSYnbRszibHmpYkQ45E3X6F7ZH1Cr0g3ZZE-wQj1N66mpt6Fd1PgMk6KdUgFTAO2PjvIGB0fLlyN3y1IRSvix6WBL_paVRPA-XNQkS')"></div>
+                    <div class="flex-1">
+                        <div class="w-14 h-14 bg-primary-container/20 rounded-2xl flex items-center justify-center mb-6">
+                            <span class="material-symbols-outlined text-primary-container text-3xl">insights</span>
+                        </div>
+                        <h3 class="font-headline-lg text-headline-lg text-white mb-4">Career Analytics</h3>
+                        <p class="font-body-lg text-on-surface-variant">Track who's viewing your profile, which headshots are performing best, and get insights on your audition success rate.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section id="success-stories" class="py-margin-desktop bg-[#131313] overflow-hidden">
+        <div class="max-w-max-width mx-auto px-container-padding text-center mb-16">
+            <h2 class="font-headline-lg text-headline-lg text-white">From <span class="text-primary-container">Audition</span> to Big Screen</h2>
+        </div>
+        <div class="flex gap-8 px-container-padding overflow-x-auto pb-12 no-scrollbar scroll-smooth" id="carousel-track">
+            <!-- Story 1 -->
+            <div class="min-w-[320px] md:min-w-[450px] glass-card p-10 rounded-[40px] flex flex-col justify-between flex-shrink-0">
+                <div>
+                    <span class="material-symbols-outlined text-primary-container text-5xl mb-6 opacity-30">format_quote</span>
+                    <p class="font-body-lg text-title-md text-white mb-8 italic">"StarLaunch changed my life. I landed my first lead role in a major Netflix series within three weeks of joining. The verification process makes a huge difference."</p>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="w-16 h-16 rounded-full overflow-hidden border-2 border-primary-container">
+                        <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpci20NdiElNvaRuK6jaEK574fOjaDf1qxqlQCfpoRt1luYR880EkfT9srygwyHwfinKaXou3ZoxpXV9sQoJuWeq059zxAwj7CArn-_WxNssxI4KLwASO3VKXOmu3gleGvuwu_6Hz8Va4kCOpiS7i84HCTs40wzRbKvaEdjW5GjcnH3JTVC0JVB2kuUV8SRK7WLx4L2ruqGATxlPiTxuTE44KUAugA8sHdxXdrTfMmoVvVPUs__IaN8vSyKBpfDMr2zCDuJgrDSlxS"/>
+                    </div>
+                    <div class="text-left">
+                        <div class="font-title-md text-white">Sarah Jenkins</div>
+                        <div class="font-label-caps text-label-caps text-on-surface-variant">Lead in "The Midnight Gate"</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Story 2 -->
+            <div class="min-w-[320px] md:min-w-[450px] glass-card p-10 rounded-[40px] flex flex-col justify-between flex-shrink-0">
+                <div>
+                    <span class="material-symbols-outlined text-primary-container text-5xl mb-6 opacity-30">format_quote</span>
+                    <p class="font-body-lg text-title-md text-white mb-8 italic">"The AI portfolio tools helped me polish my showreel so effectively that I started getting 5x more audition invitations. It's a game changer for indie actors."</p>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="w-16 h-16 rounded-full overflow-hidden border-2 border-primary-container">
+                        <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAuHmYUVXB5CTUdm_Aikxl66YJsYv8aW07PFp-VcAZzEQN5x7h94M6PpSWiL472d8f_hiMf_0JecuGdOQV6NgMzbSuP2uAEVUu_k_lQTeaUUUTPmTDnOT8a9z54e4fn7CCjeMiziRN3wBka_Ph-rxc6zLmcLrC7jvl31igxz4HV2tfCXd0zi8gsAvZ7VlA0esazkSwoGYRJSyeROZEK06AfrLbN5HuamVF32ONw7iLromQL7VZKqvphIZC2Pw0Mc_sWbl2bEE1yAeP"/>
+                    </div>
+                    <div class="text-left">
+                        <div class="font-title-md text-white">Marcus Thorne</div>
+                        <div class="font-label-caps text-label-caps text-on-surface-variant">Supporting in "Neon Drifters"</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Story 3 -->
+            <div class="min-w-[320px] md:min-w-[450px] glass-card p-10 rounded-[40px] flex flex-col justify-between flex-shrink-0">
+                <div>
+                    <span class="material-symbols-outlined text-primary-container text-5xl mb-6 opacity-30">format_quote</span>
+                    <p class="font-body-lg text-title-md text-white mb-8 italic">"As a casting director, I only use StarLaunch now. The talent quality is consistent and the interface saves me hours of screening time every week."</p>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="w-16 h-16 rounded-full overflow-hidden border-2 border-primary-container">
+                        <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARSZ_VVbnlv8Er0OCLvRFCrR1RMMEF-bPduJmzu0OIEh548jt_aeaKfHBwLUkALMrSqtOK9E_hyRqTM9s-HOao_jPl2iw9a-7h5pNqXGpaii5HuGBoTXGOitegE_6ymxsqmbEoDr6QIn-uI6tFVGbORvejippG17Pk2j1LYeP0EDWYhqPgE_QTv5OwXR4E7wmYUdnNv5oYX9zGf4bElCcMeYBJggq2inO1PaPkdFyKHsVufcYshqa6p50COPk4s4s6ETlZtJl2xgy6"/>
+                    </div>
+                    <div class="text-left">
+                        <div class="font-title-md text-white">Elena Rodriguez</div>
+                        <div class="font-label-caps text-label-caps text-on-surface-variant">Casting Director, Studio X</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Features (Glowing Section) -->
+    <section class="py-margin-desktop bg-[#131313] relative overflow-hidden">
+        <div class="absolute -top-40 -left-40 w-96 h-96 bg-primary-container/10 blur-[100px] rounded-full"></div>
+        <div class="max-w-max-width mx-auto px-container-padding relative z-10">
+            <div class="text-center mb-16">
+                <span class="bg-primary-container/10 text-primary-container font-label-caps text-label-caps px-4 py-2 rounded-full border border-primary-container/20">AI-POWERED ECOSYSTEM</span>
+                <h2 class="font-headline-lg text-headline-lg text-white mt-6">Smart Tools for Your <span class="text-primary-container">Big Break</span></h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-card p-10 rounded-3xl border-primary-container/10 gold-glow hover:border-primary-container/30 transition-all cursor-default">
+                    <span class="material-symbols-outlined text-primary-container text-4xl mb-6">psychology</span>
+                    <h3 class="font-title-md text-title-md text-white mb-4">AI Profile Review</h3>
+                    <p class="font-body-sm text-on-surface-variant">Get instant feedback on your headshots and bio from our proprietary AI trained on successful casting data.</p>
+                </div>
+                <div class="glass-card p-10 rounded-3xl border-primary-container/10 gold-glow hover:border-primary-container/30 transition-all cursor-default">
+                    <span class="material-symbols-outlined text-primary-container text-4xl mb-6">description</span>
+                    <h3 class="font-title-md text-title-md text-white mb-4">Resume Generator</h3>
+                    <p class="font-body-sm text-on-surface-variant">Convert your credits into a industry-standard cinematic CV that casting directors can export in one click.</p>
+                </div>
+                <div class="glass-card p-10 rounded-3xl border-primary-container/10 gold-glow hover:border-primary-container/30 transition-all cursor-default">
+                    <span class="material-symbols-outlined text-primary-container text-4xl mb-6">video_chat</span>
+                    <h3 class="font-title-md text-title-md text-white mb-4">Virtual Audition AI</h3>
+                    <p class="font-body-sm text-on-surface-variant">Practice your lines with an AI script reader that responds with emotional cues and professional timing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-margin-desktop bg-[#131313]">
+        <div class="max-w-max-width mx-auto px-container-padding text-center">
+            <h2 class="font-headline-lg text-headline-lg text-white mb-16">Choose Your <span class="text-primary-container">Star Path</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Free -->
+                <div class="glass-card p-10 rounded-[32px] flex flex-col">
+                    <div class="font-label-caps text-label-caps text-on-surface-variant mb-4">BASIC</div>
+                    <div class="text-5xl font-black text-white mb-8">$0<span class="text-lg font-normal text-on-surface-variant">/mo</span></div>
+                    <ul class="space-y-4 mb-10 text-left flex-1">
+                        <li class="flex items-center gap-3 text-body-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary-container text-sm">check_circle</span> 5 Monthly Applications</li>
+                        <li class="flex items-center gap-3 text-body-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary-container text-sm">check_circle</span> Basic Profile Builder</li>
+                        <li class="flex items-center gap-3 text-body-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary-container text-sm">check_circle</span> Community Support</li>
+                    </ul>
+                    <button onclick="openLoginModal()" class="w-full border border-white/20 text-white py-4 rounded-xl font-label-caps text-label-caps hover:bg-white/5 transition-all">Get Started</button>
+                </div>
+                <!-- Pro -->
+                <div class="glass-card p-10 rounded-[32px] flex flex-col relative border-primary-container/50 bg-[#ffd166]/5 transform md:scale-105 shadow-2xl gold-glow animate-fade-in">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#ffd166] text-[#3f2e00] font-label-caps text-[10px] px-3 py-1 rounded-full font-bold">MOST POPULAR</div>
+                    <div class="font-label-caps text-label-caps text-primary-container mb-4">PRO ACTOR</div>
+                    <div class="text-5xl font-black text-white mb-8">$29<span class="text-lg font-normal text-on-surface-variant">/mo</span></div>
+                    <ul class="space-y-4 mb-10 text-left flex-1">
+                        <li class="flex items-center gap-3 text-body-sm text-white"><span class="material-symbols-outlined text-primary-container text-sm">check_circle</span> Unlimited Applications</li>
+                        <li class="flex items-center gap-3 text-body-sm text-white"><span class="material-symbols-outlined text-primary-container text-sm">check_circle</span> AI Portfolio Builder</li>
+                        <li class="flex items-center gap-3 text-body-sm text-white"><span class="material-symbols-outlined text-primary-container text-sm">check_circle</span> Priority Review Status</li>
+                        <li class="flex items-center gap-3 text-body-sm text-white"><span class="material-symbols-outlined text-primary-container text-sm">check_circle</span> Direct Messaging</li>
+                    </ul>
+                    <button onclick="openLoginModal()" class="w-full bg-[#ffd166] text-[#3f2e00] py-4 rounded-xl font-label-caps text-label-caps font-black hover:brightness-110 transition-all">Go Pro</button>
+                </div>
+                <!-- Premium -->
+                <div class="glass-card p-10 rounded-[32px] flex flex-col">
+                    <div class="font-label-caps text-label-caps text-on-surface-variant mb-4">PREMIUM</div>
+                    <div class="text-5xl font-black text-white mb-8">$59<span class="text-lg font-normal text-on-surface-variant">/mo</span></div>
+                    <ul class="space-y-4 mb-10 text-left flex-1">
+                        <li class="flex items-center gap-3 text-body-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary-container text-sm">check_circle</span> Everything in Pro</li>
+                        <li class="flex items-center gap-3 text-body-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary-container text-sm">check_circle</span> Agent Representation Help</li>
+                        <li class="flex items-center gap-3 text-body-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary-container text-sm">check_circle</span> Studio Equipment Discounts</li>
+                        <li class="flex items-center gap-3 text-body-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary-container text-sm">check_circle</span> Featured Spotlight</li>
+                    </ul>
+                    <button onclick="openLoginModal()" class="w-full border border-white/20 text-white py-4 rounded-xl font-label-caps text-label-caps hover:bg-white/5 transition-all">Contact Us</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="w-full py-margin-desktop bg-[#131313] border-t border-surface-container-highest">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-container-padding max-w-max-width mx-auto">
+            <div class="col-span-1 md:col-span-1">
+                <div class="font-headline-lg text-headline-lg text-primary mb-6">StarLaunch</div>
+                <p class="font-body-sm text-body-sm text-[#5c5d5e] max-w-xs">Connecting elite cinematic talent with global production leaders. Your journey to the red carpet begins in the studio.</p>
+            </div>
+            <div class="flex flex-col gap-4">
+                <div class="font-label-caps text-label-caps text-white">Platform</div>
+                <a class="font-body-sm text-body-sm text-[#5c5d5e] hover:text-on-surface transition-opacity" href="#featured-auditions">Auditions</a>
+                <a class="font-body-sm text-body-sm text-[#5c5d5e] hover:text-on-surface transition-opacity" href="#categories">Categories</a>
+                <a class="font-body-sm text-body-sm text-[#5c5d5e] hover:text-on-surface transition-opacity" href="#success-stories">Success Stories</a>
+                <a class="font-body-sm text-body-sm text-[#5c5d5e] hover:text-on-surface transition-opacity" href="#pricing">Pricing</a>
+            </div>
+            <div class="flex flex-col gap-4">
+                <div class="font-label-caps text-label-caps text-white">Resources</div>
+                <a class="font-body-sm text-body-sm text-[#5c5d5e] hover:text-on-surface transition-opacity" href="#">Acting Tips</a>
+                <a class="font-body-sm text-body-sm text-[#5c5d5e] hover:text-on-surface transition-opacity" href="#">Casting Guide</a>
+                <a class="font-body-sm text-body-sm text-[#5c5d5e] hover:text-on-surface transition-opacity" href="#">Support Center</a>
+                <a class="font-body-sm text-body-sm text-[#5c5d5e] hover:text-on-surface transition-opacity" href="#">API Docs</a>
+            </div>
+            <div class="flex flex-col gap-4">
+                <div class="font-label-caps text-label-caps text-white">Legal</div>
+                <a class="font-body-sm text-body-sm text-[#5c5d5e] hover:text-on-surface transition-opacity" href="#">Privacy Policy</a>
+                <a class="font-body-sm text-body-sm text-[#5c5d5e] hover:text-on-surface transition-opacity" href="#">Terms of Service</a>
+                <a class="font-body-sm text-body-sm text-[#5c5d5e] hover:text-on-surface transition-opacity" href="#">Cookie Policy</a>
+                <a class="font-body-sm text-body-sm text-[#5c5d5e] hover:text-on-surface transition-opacity" href="#">Trust &amp; Safety</a>
+            </div>
+        </div>
+        <div class="max-w-max-width mx-auto px-container-padding mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="font-body-sm text-body-sm text-[#5c5d5e]">© 2026 StarLaunch. Cinematic Excellence.</p>
+            <div class="flex gap-6">
+                <span class="material-symbols-outlined text-[#5c5d5e] hover:text-[#ffd166] transition-colors cursor-pointer">public</span>
+                <span class="material-symbols-outlined text-[#5c5d5e] hover:text-[#ffd166] transition-colors cursor-pointer">movie</span>
+                <span class="material-symbols-outlined text-[#5c5d5e] hover:text-[#ffd166] transition-colors cursor-pointer">theaters</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Render auditions from state
+        function renderFeaturedAuditions() {
+            const auditions = StarLaunchDB.getAuditions();
+            const grid = document.getElementById("auditions-grid");
+            if (!grid || !auditions || auditions.length === 0) return;
+
+            // Clear first
+            grid.innerHTML = "";
+
+            // The first item is always the Large Card (takes col span 7)
+            const large = auditions[0];
+            const largeCol = document.createElement("div");
+            largeCol.className = "md:col-span-7 glass-card rounded-[32px] overflow-hidden group flex flex-col justify-end min-h-[400px] relative";
+            largeCol.innerHTML = `
+                <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700 z-0" style="background-image: url('${large.image}')"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10"></div>
+                <div class="p-8 w-full relative z-20">
+                    <span class="bg-primary-container text-on-primary-container font-label-caps text-label-caps px-3 py-1 rounded-full mb-4 inline-block">${large.type}</span>
+                    <h3 class="font-headline-lg text-headline-lg text-white mb-2">${large.title}</h3>
+                    <div class="flex flex-wrap gap-4 text-on-surface-variant font-body-sm mb-6">
+                        <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">person</span> ${large.role.split(':')[0]}</span>
+                        <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">location_on</span> ${large.location}</span>
+                        <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> ${large.deadline || 'Dec 15 Deadline'}</span>
+                    </div>
+                    <button onclick="window.location.href='audition-details.html?id=${large.id}'" class="bg-white text-black px-8 py-3 rounded-xl font-label-caps text-label-caps font-bold hover:bg-primary-container transition-colors">Apply Now</button>
+                </div>
+            `;
+            grid.appendChild(largeCol);
+
+            // Remaining elements go into the stack (takes col span 5)
+            const stackCol = document.createElement("div");
+            stackCol.className = "md:col-span-5 flex flex-col gap-8";
+            
+            const remaining = auditions.slice(1);
+            remaining.forEach(item => {
+                const card = document.createElement("div");
+                card.className = "glass-card rounded-[32px] overflow-hidden flex flex-row group min-h-[180px] h-auto md:h-[calc(50%-16px)]";
+                card.innerHTML = `
+                    <div class="w-32 md:w-44 bg-cover bg-center shrink-0 group-hover:scale-110 transition-transform duration-500" style="background-image: url('${item.image}')"></div>
+                    <div class="p-6 flex flex-col justify-center flex-1">
+                        <h3 class="font-title-md text-title-md text-white mb-1">${item.title}</h3>
+                        <p class="font-body-sm text-on-surface-variant mb-4">${item.type} · ${item.role}</p>
+                        <button onclick="quickApply('${item.id}')" class="font-label-caps text-label-caps text-primary self-start hover:text-white transition-colors">Quick Apply</button>
+                    </div>
+                `;
+                stackCol.appendChild(card);
+            });
+            grid.appendChild(stackCol);
+        }
+
+        // Quick Apply trigger
+        function quickApply(auditionId) {
+            const success = StarLaunchDB.applyToAudition(auditionId);
+            if (success) {
+                showToast("Application submitted successfully!");
+            } else {
+                showToast("You have already applied to this audition.", "info");
+            }
+        }
+
+        // Autoscroll success stories
+        function initCarousel() {
+            const track = document.getElementById("carousel-track");
+            if (!track) return;
+            let count = 0;
+            setInterval(() => {
+                count++;
+                if (count >= track.children.length) {
+                    count = 0;
+                }
+                const width = track.children[0].offsetWidth + 32;
+                track.scrollTo({
+                    left: count * width,
+                    behavior: "smooth"
+                });
+            }, 6000);
+        }
+
+        // Observer for scroll effects
+        function initScrollAnimations() {
+            const observerOptions = { threshold: 0.1 };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+                observer.observe(section);
+            });
+
+            const hero = document.querySelector('section');
+            hero.classList.remove('opacity-0', 'translate-y-10');
+            hero.classList.add('opacity-100');
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            renderFeaturedAuditions();
+            initCarousel();
+            initScrollAnimations();
+        });
+    </script>
+</body>
+</html>

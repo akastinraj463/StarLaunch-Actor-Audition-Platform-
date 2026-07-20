@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>StarLaunch | Casting Dashboard</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles.css">
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-dim": "#131313",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "on-secondary-fixed": "#1b1b1b",
+                    "on-secondary-fixed-variant": "#474746",
+                    "on-primary-fixed-variant": "#5b4300",
+                    "inverse-primary": "#785a00",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-tertiary-container": "#5c5d5e",
+                    "error": "#ffb4ab",
+                    "on-primary-container": "#765900",
+                    "tertiary-fixed": "#e2e2e2",
+                    "surface-container-low": "#1c1b1b",
+                    "surface-container-high": "#2a2a2a",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "tertiary-container": "#d6d7d7",
+                    "inverse-on-surface": "#313030",
+                    "tertiary": "#f3f3f3",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "surface-container-highest": "#353534",
+                    "surface-container": "#201f1f",
+                    "surface-variant": "#353534",
+                    "secondary-container": "#474746",
+                    "on-tertiary": "#2f3131",
+                    "primary-container": "#ffd166",
+                    "secondary": "#c8c6c5",
+                    "secondary-fixed": "#e5e2e1",
+                    "on-surface": "#e5e2e1",
+                    "on-secondary-container": "#b7b5b4",
+                    "outline-variant": "#4e4636",
+                    "outline": "#9a8f7d",
+                    "on-secondary": "#313030",
+                    "on-surface-variant": "#d1c5b1",
+                    "primary-fixed-dim": "#edc157",
+                    "on-primary": "#3f2e00",
+                    "primary": "#fff2dc",
+                    "on-primary-fixed": "#251a00",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "surface-tint": "#edc157",
+                    "error-container": "#93000a",
+                    "surface": "#131313",
+                    "on-error": "#690005",
+                    "on-error-container": "#ffdad6",
+                    "surface-bright": "#3a3939",
+                    "primary-fixed": "#ffdf9b",
+                    "on-background": "#e5e2e1",
+                    "background": "#131313",
+                    "inverse-surface": "#e5e2e1"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-padding": "24px",
+                    "margin-desktop": "48px",
+                    "unit": "8px",
+                    "gutter": "16px",
+                    "max-width": "1440px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "title-md": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "headline-lg-mobile": ["Inter"]
+            },
+            "fontSize": {
+                    "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "500"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="selection:bg-primary-container selection:text-on-primary-container bg-[#0F0F0F] text-[#e5e2e1] font-['Inter',sans-serif] min-h-screen">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="h-screen w-64 fixed left-0 top-0 bg-[#1c1c1c]/80 backdrop-blur-2xl border-r border-white/5 shadow-2xl flex flex-col py-8 px-4 z-50">
+        <div class="mb-10 px-2">
+            <span class="font-headline-lg-mobile text-headline-lg-mobile font-black text-primary tracking-tighter cursor-pointer" onclick="window.location.href='index.html'">StarLaunch</span>
+        </div>
+        <nav class="flex-1 space-y-1">
+            <!-- Active Tab: Dashboard -->
+            <a class="group flex items-center gap-3 px-4 py-3 rounded-lg bg-primary/10 text-primary border-r-4 border-primary transition-all relative" href="casting-dashboard.html">
+                <span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+                <span class="font-label-caps text-label-caps">Dashboard</span>
+            </a>
+            <a class="group flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-white/5 hover:text-on-surface transition-all" href="#" onclick="showToast('Loading active listings...')">
+                <span class="material-symbols-outlined text-xl">record_voice_over</span>
+                <span class="font-label-caps text-label-caps">Active Auditions</span>
+            </a>
+            <a class="group flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-white/5 hover:text-on-surface transition-all" href="#" onclick="showToast('Loading database talent directory...')">
+                <span class="material-symbols-outlined text-xl">groups</span>
+                <span class="font-label-caps text-label-caps">Talent Database</span>
+            </a>
+        </nav>
+        <div class="mt-auto px-2 mb-6">
+            <button onclick="openPostAuditionModal()" class="w-full bg-[#ffd166] text-[#3f2e00] py-3 px-4 rounded-xl font-label-caps text-label-caps font-bold hover:brightness-110 active:scale-95 transition-all flex items-center justify-center gap-2 shadow-lg shadow-[#ffd166]/10">
+                <span class="material-symbols-outlined text-[20px]">add</span>
+                Post Audition
+            </button>
+        </div>
+        <div class="border-t border-white/5 pt-6 space-y-1">
+            <div class="flex items-center gap-3 px-4 py-2 mb-4 cursor-pointer" onclick="showToast('Opening Casting Profile...')">
+                <div class="w-10 h-10 rounded-full bg-surface-container-high border border-white/10 overflow-hidden">
+                    <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARSZ_VVbnlv8Er0OCLvRFCrR1RMMEF-bPduJmzu0OIEh548jt_aeaKfHBwLUkALMrSqtOK9E_hyRqTM9s-HOao_jPl2iw9a-7h5pNqXGpaii5HuGBoTXGOitegE_6ymxsqmbEoDr6QIn-uI6tFVGbORvejippG17Pk2j1LYeP0EDWYhqPgE_QTv5OwXR4E7wmYUdnNv5oYX9zGf4bElCcMeYBJggq2inO1PaPkdFyKHsVufcYshqa6p50COPk4s4s6ETlZtJl2xgy6"/>
+                </div>
+                <div>
+                    <p class="font-body-lg text-body-sm font-bold text-on-surface">Elena R.</p>
+                    <p class="text-[10px] font-label-caps text-on-surface-variant">Pro Casting Dir.</p>
+                </div>
+            </div>
+            <button onclick="window.location.href='actor-dashboard.html'" class="w-full mb-3 border border-white/15 text-white/90 py-2.5 rounded-xl font-label-caps text-[11px] font-bold hover:bg-white/5 active:scale-95 transition-all">
+                Switch to Actor
+            </button>
+            <a class="flex items-center gap-3 px-4 py-2 text-on-surface-variant hover:text-on-surface transition-all" href="#" onclick="showToast('Casting settings opened.')">
+                <span class="material-symbols-outlined text-[20px]">settings</span>
+                <span class="font-label-caps text-label-caps">Settings</span>
+            </a>
+            <a class="flex items-center gap-3 px-4 py-2 text-error hover:text-error/80 transition-all" href="index.html">
+                <span class="material-symbols-outlined text-[20px]">logout</span>
+                <span class="font-label-caps text-label-caps">Logout</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="ml-64 min-h-screen bg-[#0F0F0F] pb-12">
+        <!-- Top Navigation Anchor (Header) -->
+        <header class="h-20 bg-[#131313]/70 backdrop-blur-3xl border-b border-white/10 flex justify-between items-center px-container-padding sticky top-0 z-40">
+            <div class="flex flex-col">
+                <h1 class="font-headline-lg text-headline-lg text-on-surface">Casting Dashboard</h1>
+                <p class="font-label-caps text-label-caps text-on-surface-variant opacity-60">Monday, Oct 24, 2026</p>
+            </div>
+            <div class="flex items-center gap-6">
+                <div class="relative hidden lg:block">
+                    <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant" data-icon="search">search</span>
+                    <input id="search-candidates" class="bg-[#1c1b1b] border-none rounded-full pl-10 pr-6 py-2 text-body-sm text-on-surface w-64 focus:ring-1 focus:ring-primary-container transition-all" placeholder="Search applicants..." type="text"/>
+                </div>
+                <button class="relative w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/5 transition-colors" onclick="showToast('No new notifications.')">
+                    <span class="material-symbols-outlined text-on-surface" data-icon="notifications">notifications</span>
+                    <span class="absolute top-2 right-2 w-2 h-2 bg-[#ffd166] rounded-full ring-2 ring-background"></span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Scrollable Canvas -->
+        <div class="p-container-padding max-w-max-width mx-auto">
+            
+            <!-- Metrics Bento Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-margin-desktop">
+                <div class="glass-panel p-6 rounded-2xl col-span-1 border border-white/5 hover:border-primary/20 transition-all group">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-3 bg-primary-container/10 rounded-xl text-primary-container">
+                            <span class="material-symbols-outlined">group</span>
+                        </div>
+                        <span class="text-primary font-label-caps text-[10px] bg-primary/10 px-2 py-0.5 rounded-full">+12%</span>
+                    </div>
+                    <p class="font-label-caps text-label-caps text-on-surface-variant mb-1">Total Applicants</p>
+                    <h3 id="metric-applicants" class="font-display-lg text-display-lg text-on-surface tracking-tight">1,287</h3>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl col-span-1 border border-white/5 hover:border-primary/20 transition-all group">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-3 bg-white/5 rounded-xl text-white">
+                            <span class="material-symbols-outlined">record_voice_over</span>
+                        </div>
+                    </div>
+                    <p class="font-label-caps text-label-caps text-on-surface-variant mb-1">Active Auditions</p>
+                    <h3 id="metric-auditions" class="font-display-lg text-display-lg text-on-surface tracking-tight">24</h3>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl col-span-1 border border-white/5 hover:border-primary/20 transition-all group">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-3 bg-[#ffd166]/10 rounded-xl text-[#ffd166]">
+                            <span class="material-symbols-outlined">calendar_today</span>
+                        </div>
+                    </div>
+                    <p class="font-label-caps text-label-caps text-on-surface-variant mb-1">Scheduled Today</p>
+                    <h3 class="font-display-lg text-display-lg text-on-surface tracking-tight">8</h3>
+                </div>
+                <!-- Call to Action Card -->
+                <div class="bg-[#ffd166] p-6 rounded-2xl col-span-1 relative overflow-hidden group cursor-pointer flex flex-col justify-end" onclick="showToast('AI Match is screening profiles...')">
+                    <div class="relative z-10">
+                        <p class="font-label-caps text-[#3f2e00]/80 mb-1">Premium Feature</p>
+                        <h3 class="font-headline-lg text-headline-lg text-[#3f2e00] font-black leading-tight mb-4">AI Talent Match</h3>
+                        <button class="flex items-center gap-2 text-[#3f2e00] font-bold group-hover:gap-3 transition-all">
+                            Explore <span class="material-symbols-outlined">arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Split: Recent & Filters -->
+            <div class="grid grid-cols-1 xl:grid-cols-4 gap-gutter items-start">
+                
+                <!-- Main Applications Table -->
+                <div class="xl:col-span-3">
+                    <div class="glass-panel rounded-3xl border border-white/5 overflow-hidden">
+                        <div class="px-8 py-6 border-b border-white/5 flex justify-between items-center">
+                            <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Recent Applications</h2>
+                            <div class="flex gap-2">
+                                <button class="p-2 hover:bg-white/5 rounded-lg text-on-surface-variant transition-colors" onclick="showToast('Filtering is active.')">
+                                    <span class="material-symbols-outlined">filter_list</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left border-collapse">
+                                <thead class="bg-surface-container-low/50">
+                                    <tr>
+                                        <th class="px-8 py-4 font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest border-b border-white/5">Talent</th>
+                                        <th class="px-8 py-4 font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest border-b border-white/5">Role</th>
+                                        <th class="px-8 py-4 font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest border-b border-white/5">Applied</th>
+                                        <th class="px-8 py-4 font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest border-b border-white/5">Status</th>
+                                        <th class="px-8 py-4 border-b border-white/5"></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="candidates-table-body" class="divide-y divide-white/5">
+                                    <!-- Populated by JS -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="px-8 py-6 border-t border-white/5 flex justify-center">
+                            <button class="text-primary font-label-caps text-label-caps hover:underline" onclick="showToast('All applications loaded.')">See all applications</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar Filters & Insights -->
+                <div class="flex flex-col gap-gutter">
+                    <!-- Filters Section -->
+                    <div class="glass-panel p-6 rounded-3xl border border-white/5">
+                        <h3 class="font-title-md text-title-md text-on-surface mb-6">Talent Filters</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <label class="font-label-caps text-label-caps text-on-surface-variant block mb-3">Project Status</label>
+                                <div class="space-y-2">
+                                    <label class="flex items-center gap-3 group cursor-pointer">
+                                        <input checked="" class="rounded border-white/10 bg-surface-container-low text-primary-container focus:ring-0" type="checkbox"/>
+                                        <span class="text-body-sm text-on-surface group-hover:text-primary transition-colors">Active Auditions</span>
+                                    </label>
+                                    <label class="flex items-center gap-3 group cursor-pointer">
+                                        <input class="rounded border-white/10 bg-surface-container-low text-primary-container focus:ring-0" type="checkbox"/>
+                                        <span class="text-body-sm text-on-surface group-hover:text-primary transition-colors">Pre-production</span>
+                                    </label>
+                                    <label class="flex items-center gap-3 group cursor-pointer">
+                                        <input class="rounded border-white/10 bg-surface-container-low text-primary-container focus:ring-0" type="checkbox"/>
+                                        <span class="text-body-sm text-on-surface group-hover:text-primary transition-colors">Closed</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="font-label-caps text-label-caps text-on-surface-variant block mb-3">Experience Level</label>
+                                <select class="w-full bg-surface-container-low border border-white/10 rounded-xl text-body-sm text-on-surface py-2 focus:ring-1 focus:ring-primary-container">
+                                    <option>Professional (SAG-AFTRA)</option>
+                                    <option>Emerging Talent</option>
+                                    <option>Student/Independent</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="font-label-caps text-label-caps text-on-surface-variant block mb-3">Skills &amp; Tags</label>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-primary/10 text-primary text-[11px] font-label-caps rounded-full border border-primary/20">Martial Arts</span>
+                                    <span class="px-3 py-1 bg-white/5 text-on-surface-variant text-[11px] font-label-caps rounded-full border border-white/5">Fluent French</span>
+                                    <span class="px-3 py-1 bg-white/5 text-on-surface-variant text-[11px] font-label-caps rounded-full border border-white/5">Singing</span>
+                                    <span class="px-3 py-1 bg-white/5 text-on-surface-variant text-[11px] font-label-caps rounded-full border border-white/5">Stunts</span>
+                                </div>
+                            </div>
+                            <button class="w-full py-3 bg-white text-black font-bold rounded-xl text-label-caps hover:bg-primary-container transition-colors active:scale-95" onclick="showToast('Filters applied.')">Apply Filters</button>
+                        </div>
+                    </div>
+
+                    <!-- Upcoming Auditions Mini Card -->
+                    <div class="glass-panel p-6 rounded-3xl border border-white/5 bg-gradient-to-br from-surface-container to-surface-dim">
+                        <div class="flex justify-between items-center mb-6">
+                            <h3 class="font-title-md text-title-md text-on-surface">Live Now</h3>
+                            <span class="flex h-2 w-2 rounded-full bg-error animate-pulse"></span>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4 p-3 bg-white/5 rounded-2xl hover:bg-white/10 transition-colors cursor-pointer" onclick="showToast('Opening Room 402...')">
+                                <div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-primary">videocam</span>
+                                </div>
+                                <div>
+                                    <p class="text-body-sm font-bold text-on-surface">The Last Frontier</p>
+                                    <p class="text-[11px] text-on-surface-variant">Room 402 • 14:00</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 p-3 bg-white/5 rounded-2xl hover:bg-white/10 transition-colors cursor-pointer" onclick="showToast('Opening Virtual Room...')">
+                                <div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-primary">videocam</span>
+                                </div>
+                                <div>
+                                    <p class="text-body-sm font-bold text-on-surface">Starlight Sonata</p>
+                                    <p class="text-[11px] text-on-surface-variant">Virtual Room • 15:30</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer Anchor -->
+        <footer class="w-full py-margin-desktop bg-[#131313] border-t border-surface-container-highest mt-margin-desktop">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-container-padding max-w-max-width mx-auto">
+                <div class="col-span-1 md:col-span-2">
+                    <span class="font-headline-lg text-headline-lg text-primary mb-4 block">StarLaunch</span>
+                    <p class="font-body-sm text-body-sm text-on-tertiary-container max-w-sm mb-6">
+                        Empowering casting professionals with cinematic clarity and data-driven insights. Built for the modern film ecosystem.
+                    </p>
+                    <p class="font-body-sm text-body-sm text-on-tertiary-container opacity-50">© 2026 StarLaunch. Cinematic Excellence.</p>
+                </div>
+                <div class="flex flex-col gap-3">
+                    <span class="font-label-caps text-label-caps text-on-surface mb-2">Support</span>
+                    <a class="font-body-sm text-body-sm text-on-tertiary-container hover:text-on-surface transition-colors" href="#">Knowledge Base</a>
+                    <a class="font-body-sm text-body-sm text-on-tertiary-container hover:text-on-surface transition-colors" href="#">Video Tutorials</a>
+                    <a class="font-body-sm text-body-sm text-on-tertiary-container hover:text-on-surface transition-colors" href="#">Direct Support</a>
+                </div>
+                <div class="flex flex-col gap-3">
+                    <span class="font-label-caps text-label-caps text-on-surface mb-2">Legal</span>
+                    <a class="font-body-sm text-body-sm text-on-tertiary-container hover:text-on-surface transition-colors" href="#">Privacy Policy</a>
+                    <a class="font-body-sm text-body-sm text-on-tertiary-container hover:text-on-surface transition-colors" href="#">Terms of Service</a>
+                    <a class="font-body-sm text-body-sm text-on-tertiary-container hover:text-on-surface transition-colors" href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Post Audition Modal -->
+    <div id="post-audition-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="glass-card w-full max-w-lg p-8 rounded-[32px] transform scale-95 transition-transform duration-300 relative border border-white/10 max-h-[90vh] overflow-y-auto">
+            <button onclick="closePostAuditionModal()" class="absolute top-6 right-6 text-on-surface-variant hover:text-white transition-colors">
+                <span class="material-symbols-outlined text-2xl">close</span>
+            </button>
+            <h2 class="font-headline-lg text-headline-lg text-white mb-2">Post a New <span class="text-primary-container">Audition</span></h2>
+            <p class="font-body-sm text-body-sm text-on-surface-variant mb-6">List your project on the StarLaunch audition engine.</p>
+            
+            <form id="post-audition-form" class="space-y-4" onsubmit="handlePostAudition(event)">
+                <div>
+                    <label class="block font-label-caps text-label-caps text-on-surface-variant mb-1">PROJECT TITLE</label>
+                    <input required id="p-title" class="w-full bg-[#1c1b1b] border border-white/15 rounded-xl px-4 py-3 text-body-sm text-on-surface focus:ring-1 focus:ring-primary-container focus:border-primary-container" placeholder="e.g. The Silent Horizon" type="text"/>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block font-label-caps text-label-caps text-on-surface-variant mb-1">PROJECT TYPE</label>
+                        <select id="p-type" class="w-full bg-[#1c1b1b] border border-white/15 rounded-xl px-4 py-3 text-body-sm text-on-surface focus:ring-1 focus:ring-primary-container">
+                            <option>Movie</option>
+                            <option>Commercial</option>
+                            <option>TV Series</option>
+                            <option>Web Series</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block font-label-caps text-label-caps text-on-surface-variant mb-1">ESTIMATED RATE / SALARY</label>
+                        <input required id="p-salary" class="w-full bg-[#1c1b1b] border border-white/15 rounded-xl px-4 py-3 text-body-sm text-on-surface focus:ring-1 focus:ring-primary-container" placeholder="e.g. $2,500/Day" type="text"/>
+                    </div>
+                </div>
+                <div>
+                    <label class="block font-label-caps text-label-caps text-on-surface-variant mb-1">ROLE NAME</label>
+                    <input required id="p-role" class="w-full bg-[#1c1b1b] border border-white/15 rounded-xl px-4 py-3 text-body-sm text-on-surface focus:ring-1 focus:ring-primary-container" placeholder="e.g. Lead Actor: Kaelen Vance" type="text"/>
+                </div>
+                <div>
+                    <label class="block font-label-caps text-label-caps text-on-surface-variant mb-1">LOCATION</label>
+                    <input required id="p-location" class="w-full bg-[#1c1b1b] border border-white/15 rounded-xl px-4 py-3 text-body-sm text-on-surface focus:ring-1 focus:ring-primary-container" placeholder="e.g. Los Angeles, CA" type="text"/>
+                </div>
+                <div>
+                    <label class="block font-label-caps text-label-caps text-on-surface-variant mb-1">SHORT DESCRIPTION</label>
+                    <textarea required id="p-desc" class="w-full bg-[#1c1b1b] border border-white/15 rounded-xl px-4 py-3 text-body-sm text-on-surface h-20 focus:ring-1 focus:ring-primary-container" placeholder="Describe the project..."></textarea>
+                </div>
+                
+                <button type="submit" class="w-full bg-[#ffd166] text-[#3f2e00] py-4 rounded-xl font-label-caps text-label-caps font-bold hover:brightness-110 transition-all active:scale-95 flex items-center justify-center gap-2 shadow-lg shadow-[#ffd166]/10">
+                    <span class="material-symbols-outlined">publish</span> PUBLISH CASTING CALL
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+    <script>
+        function openPostAuditionModal() {
+            const modal = document.getElementById("post-audition-modal");
+            modal.classList.remove("pointer-events-none");
+            modal.classList.add("opacity-100");
+            modal.querySelector(".glass-card").classList.remove("scale-95");
+            modal.querySelector(".glass-card").classList.add("scale-100");
+        }
+
+        function closePostAuditionModal() {
+            const modal = document.getElementById("post-audition-modal");
+            modal.classList.add("pointer-events-none");
+            modal.classList.remove("opacity-100");
+            modal.querySelector(".glass-card").classList.add("scale-95");
+            modal.querySelector(".glass-card").classList.remove("scale-100");
+        }
+
+        // Post audition handler
+        function handlePostAudition(e) {
+            e.preventDefault();
+            const title = document.getElementById("p-title").value;
+            const type = document.getElementById("p-type").value;
+            const salary = document.getElementById("p-salary").value;
+            const role = document.getElementById("p-role").value;
+            const location = document.getElementById("p-location").value;
+            const description = document.getElementById("p-desc").value;
+
+            // Generate an image URL from default stock sets to keep aesthetics high
+            let image = "https://lh3.googleusercontent.com/aida-public/AB6AXuBGNQ5BbZ5yJ6K8O2xyMxT3ulu3A8nvYuFiuDgtZU5gC5Bsv3yrQq579gjELsP2CvpUnPyP9adYTWBMY39CYUsbgeUPT96JNGmmDxF8yo3CjnkfY_YZ-X4AlX23rfGGpXg16_N1clzJnn-b7l-Rdti5kTMr22rXAuo9YzMdyynIwzD57qz--ZBx3DI0iCs8qEbTh6IE6c5zUelgSjEjuDK-1iBUfl96WUFsdUfaFJz9zTTa0SF0tlVwRxdWAuYKsOX_sXeRsdnzf4G4";
+            if (type === "Movie") {
+                image = "https://lh3.googleusercontent.com/aida-public/AB6AXuDT4paOf2AJIY_Az9aXYrHF8dGi8aBcAX_NY6Sc07-p4sVMhGSiQPuOI9EMY0f4augF1-c5Gnb4NH4M1yHxCEi0AeI1_jjh3vJXjr-s-DO5TLu3oJS-Qmd88Z6_Ez4BdJ8Ptp_bQ0aBeNjIYCeBEo_IZjK3VBwTau3hPKk_iENZTE642W_SSCuyb3U5FBGm8FVB7xTM0kzGH15uiloUBl0PdLMn4fOM-8StE_F6jhfyrRHWlbNLl7I8uz0TlnzB0zWijXzluUABJJn0";
+            } else if (type === "Commercial") {
+                image = "https://lh3.googleusercontent.com/aida-public/AB6AXuDNwjJWJ8Hda8qCGSE8fs38Ks29oe7u0lgz7c7PXnmp7MVCLceAW0sRTDutqdqm8spILpYw7fzYbKNHiRX_KpL_cXsNvjD9LECBNd1fJ-DPa1sQmEV9s7158tmKchQW8q1HEKNTqOmI88jRG4UcjN1e58Y3FOlmTwh6hXHIim87EkiTLkMkUaL5e39AKC7cdEUY_JU7wv5VQIFPm4EfwkObQkfZt_uiiD0bVZToKmWz94hno1R03pPy2DUD_FFQdZBBNs9IT2C6fWdr";
+            }
+
+            StarLaunchDB.addAudition({
+                title, type, salary, role, location, description, image,
+                detailedDescription: description,
+                detailedLocation: location + " (Production Studio)",
+                dates: "Dec 10, 2026 - Mar 15, 2027",
+                deadline: "Jan 05 Deadline"
+            });
+
+            closePostAuditionModal();
+            document.getElementById("post-audition-form").reset();
+            showToast("Audition posted successfully!");
+            
+            // Re-render
+            updateMetrics();
+        }
+
+        function updateMetrics() {
+            const auditions = StarLaunchDB.getAuditions();
+            const apps = StarLaunchDB.getApplications();
+            
+            document.getElementById("metric-auditions").innerText = auditions.length + 21; // offset for mock numbers
+            document.getElementById("metric-applicants").innerText = apps.length + 1284;
+        }
+
+        // Render candidate applications with search filter
+        function renderCandidates(filterQuery = "") {
+            const tbody = document.getElementById("candidates-table-body");
+            if (!tbody) return;
+
+            const apps = StarLaunchDB.getApplications();
+            const query = filterQuery.toLowerCase();
+
+            // Default static candidates from Stitch designs
+            const staticCandidates = [
+                {
+                    name: "Sophia Chen",
+                    location: "Los Angeles, CA",
+                    role: "Protagonist",
+                    applied: "2 hours ago",
+                    status: "Pending Review",
+                    statusColor: "text-primary-container",
+                    statusDot: "bg-primary-container",
+                    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDYGsp5O_bQDsZuMbW8ozFPql5_tJgzeQafv1RP2p1g3Iy5Mbll3BV-_L_Ed73ZHp9xpeFAWhpLcx0zv4t25t97iB397KLD6F_IPoG36n-364vt0VgxCqsaTGGt7Fn2hzxFrxgCrRruo-msNPhO6HFG4HrLox_JdKccRPHRFmvWMcgi2wdffkrU9OV7pXRooiQ_9ThkEl8Zxp5qyR7v0w6JIrdl5mJBWlArVguxZBZCf7vI6tk7plxfimEGEjTvphIFmWjLATt4e45S"
+                },
+                {
+                    name: "Marcus Thorne",
+                    location: "London, UK",
+                    role: "Antagonist",
+                    applied: "5 hours ago",
+                    status: "Shortlisted",
+                    statusColor: "text-on-surface opacity-60",
+                    statusDot: "bg-on-surface-variant",
+                    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuB5EdnnHqcOFaC_drOMzUqiSZfWtvmMQelMuJjOSA9WCG6x7ldqf0TKJEeZr8pvmu7eKtsUQfue5kJ82-LSB6jYKzJgj1-zz5cMWAou6fdxNVuizgMStBRZlmKUQlqJSVilUGpZ42YvnsopXGzpcSfs6vpxD7bqux2aEwRu_3Q7REP6HnegJwdL6PGVkBRdtqEGsxLm0w-Ab8ZMdo2DaBtLS4JrAJlGc7misGMSkbYr2-0_T8doE7Dd-LwEf0A0U1eQXE5nb92QInRX"
+                },
+                {
+                    name: "Elena Rodriguez",
+                    location: "New York, NY",
+                    role: "Supportive",
+                    applied: "Yesterday",
+                    status: "Needs Update",
+                    statusColor: "text-error",
+                    statusDot: "bg-error",
+                    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDPIkBl_4tb4CIkhjRm99Gfm_bxg2P_IKHww-p8Auu2e7GMv8rQIQG3d8Y087Jtt8CmSA0CzU4dwWyyr1Dr3-k1Yc17O3Vd_Stfrkd8pj5xtTelr93-vAXfsc6xLNaAxG6Bmw0f75ssBKhMPN95qJHKmOLzgsj_hCcdLr-h1_9EbzfT93ybZt5y7U_uaSmWXRavnec-YZqFzREfYyXd8Jv9-d3U9Zann0I79AYy3u25Tb70Fbg-JHjQekQwlU4rYWyvI-u_tYiUkCGx"
+                }
+            ];
+
+            // Merge with live applications
+            const allCandidates = [...staticCandidates];
+            
+            apps.forEach(app => {
+                const auditions = StarLaunchDB.getAuditions();
+                const aud = auditions.find(a => a.id === app.auditionId);
+                const roleName = aud ? aud.role.split(':')[0] : "Lead";
+                
+                allCandidates.unshift({
+                    name: app.actorName,
+                    location: "Los Angeles, CA",
+                    role: roleName,
+                    applied: "Just now",
+                    status: app.status,
+                    statusColor: "text-primary-container",
+                    statusDot: "bg-primary-container",
+                    image: app.actorImage,
+                    isLive: true,
+                    id: app.id
+                });
+            });
+
+            // Filter
+            const filtered = allCandidates.filter(c => 
+                c.name.toLowerCase().includes(query) ||
+                c.location.toLowerCase().includes(query) ||
+                c.role.toLowerCase().includes(query)
+            );
+
+            tbody.innerHTML = "";
+            filtered.forEach(c => {
+                const tr = document.createElement("tr");
+                tr.className = "hover:bg-white/5 transition-colors group cursor-pointer";
+                tr.innerHTML = `
+                    <td class="px-8 py-5" onclick="window.location.href='actor-profile.html'">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-surface-container-high overflow-hidden border border-white/10 ring-0 group-hover:ring-2 ring-primary transition-all">
+                                <img class="w-full h-full object-cover" src="${c.image}"/>
+                            </div>
+                            <div>
+                                <p class="font-body-lg text-body-lg font-semibold text-on-surface">${c.name}</p>
+                                <p class="text-[12px] text-on-surface-variant">${c.location}</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="px-8 py-5">
+                        <span class="px-3 py-1 bg-surface-container-highest rounded-full text-[11px] font-label-caps text-on-surface border border-white/10">${c.role}</span>
+                    </td>
+                    <td class="px-8 py-5 text-body-sm text-on-surface-variant">${c.applied}</td>
+                    <td class="px-8 py-5">
+                        <span class="flex items-center gap-1.5 ${c.statusColor} font-label-caps text-label-caps">
+                            <span class="w-2 h-2 rounded-full ${c.statusDot}"></span>
+                            ${c.status}
+                        </span>
+                    </td>
+                    <td class="px-8 py-5 text-right">
+                        ${c.isLive ? `
+                            <button onclick="changeStatus('${c.id}')" class="bg-primary-container text-on-primary-container px-4 py-2 rounded-lg text-label-caps font-bold hover:brightness-110 transition-all mr-2">Shortlist</button>
+                        ` : ''}
+                        <button onclick="window.location.href='actor-profile.html'" class="bg-white/10 hover:bg-white/20 text-on-surface px-4 py-2 rounded-lg text-label-caps font-bold transition-all">View Profile</button>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        // Change application status
+        function changeStatus(appId) {
+            const apps = StarLaunchDB.getApplications();
+            const app = apps.find(a => a.id === appId);
+            if (app) {
+                app.status = "Shortlisted";
+                StarLaunchDB.saveApplications(apps);
+                showToast("Candidate Alex Rivera has been shortlisted!");
+                renderCandidates();
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            renderCandidates();
+            updateMetrics();
+
+            // Search filter listener
+            const searchInput = document.getElementById("search-candidates");
+            if (searchInput) {
+                searchInput.addEventListener("input", (e) => {
+                    renderCandidates(e.target.value);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

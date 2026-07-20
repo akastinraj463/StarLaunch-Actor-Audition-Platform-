@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>StarLaunch | Alex Rivera Profile</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles.css">
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-dim": "#131313",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "on-secondary-fixed": "#1b1b1b",
+                    "on-secondary-fixed-variant": "#474746",
+                    "on-primary-fixed-variant": "#5b4300",
+                    "inverse-primary": "#785a00",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-tertiary-container": "#5c5d5e",
+                    "error": "#ffb4ab",
+                    "on-primary-container": "#765900",
+                    "tertiary-fixed": "#e2e2e2",
+                    "surface-container-low": "#1c1b1b",
+                    "surface-container-high": "#2a2a2a",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "tertiary-container": "#d6d7d7",
+                    "inverse-on-surface": "#313030",
+                    "tertiary": "#f3f3f3",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "surface-container-highest": "#353534",
+                    "surface-container": "#201f1f",
+                    "surface-variant": "#353534",
+                    "secondary-container": "#474746",
+                    "on-tertiary": "#2f3131",
+                    "primary-container": "#ffd166",
+                    "secondary": "#c8c6c5",
+                    "secondary-fixed": "#e5e2e1",
+                    "on-surface": "#e5e2e1",
+                    "on-secondary-container": "#b7b5b4",
+                    "outline-variant": "#4e4636",
+                    "outline": "#9a8f7d",
+                    "on-secondary": "#313030",
+                    "on-surface-variant": "#d1c5b1",
+                    "primary-fixed-dim": "#edc157",
+                    "on-primary": "#3f2e00",
+                    "primary": "#fff2dc",
+                    "on-primary-fixed": "#251a00",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "surface-tint": "#edc157",
+                    "error-container": "#93000a",
+                    "surface": "#131313",
+                    "on-error": "#690005",
+                    "on-error-container": "#ffdad6",
+                    "surface-bright": "#3a3939",
+                    "primary-fixed": "#ffdf9b",
+                    "on-background": "#e5e2e1",
+                    "background": "#131313",
+                    "inverse-surface": "#e5e2e1"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-padding": "24px",
+                    "margin-desktop": "48px",
+                    "unit": "8px",
+                    "gutter": "16px",
+                    "max-width": "1440px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "title-md": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "headline-lg-mobile": ["Inter"]
+            },
+            "fontSize": {
+                    "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "500"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="selection:bg-primary-container selection:text-on-primary-container bg-[#0F0F0F] text-[#e5e2e1] font-['Inter',sans-serif]">
+    
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-[#131313]/70 backdrop-blur-3xl shadow-2xl border-b border-white/10 transition-all duration-300 h-20">
+        <div class="flex justify-between items-center px-container-padding max-w-max-width mx-auto h-full">
+            <div class="font-display-lg text-display-lg font-bold text-primary tracking-tighter cursor-pointer" onclick="window.location.href='index.html'">StarLaunch</div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="index.html#featured-auditions">Auditions</a>
+                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="index.html#categories">Categories</a>
+                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="index.html#success-stories">Success Stories</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <button id="nav-dashboard-btn" class="bg-white/5 hover:bg-white/10 text-white px-6 py-2 rounded-full font-label-caps text-label-caps font-bold transition-all" onclick="goBackToDashboard()">DASHBOARD</button>
+                <button class="bg-[#ffd166] text-[#3f2e00] px-6 py-2 rounded-full font-label-caps text-label-caps font-bold hover:brightness-110 active:scale-95 transition-all" data-action="share">SHARE</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative h-[614px] min-h-[400px] w-full overflow-hidden">
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC55Wvh2Ae7JnzjcvYlRSL8hoNNMJldwnji4kFf7vQ4wwSaxEd1gl41QHgwm_ILiZh8yQJH0RVIsVF5BTqvKKx7rEMcKM7iA3aoVlJsHSwn8S5-I0hgmcL6rTQeqMUPSV6KqWl5VMXzV1xWiO0Vt8A4LbT_2NiZIc3yO396h4pZJlQChsiGzWPacTa01ReUmLiMYIJO57vg-8tCb38Z8jfe87OheypJaE1GfBjE6fi8HsXn-bGCawh7bjdR1iMM9noA9xxC1l06o9cx')"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F0F0F] via-[#0F0F0F]/40 to-transparent"></div>
+            
+            <!-- Profile Overview Overlay -->
+            <div class="absolute bottom-0 left-0 w-full px-container-padding pb-8">
+                <div class="max-w-max-width mx-auto flex flex-col md:flex-row items-end gap-8">
+                    <div class="relative group">
+                        <div class="w-40 h-40 md:w-56 md:h-56 rounded-full border-4 border-[#131313] overflow-hidden shadow-2xl premium-shadow">
+                            <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpqAFAvxDM94FAxtldl-s1a1Cllo5SzqdUOcLzMs_UZNqPZYz8I59hBIoSLiuRJA2lUGIcru19lleF3q4h0lRMmSHrjffLsmOaTWFgQoXew7Y0LhnlgEpsvHqFpI9sA8IZY3TiEsnQAIbrkwIm-iJFGhuK1rz2QK0jsDJhW0Fcy40zYiRnaLCz71qjk4uaxjjOqAJGf4HrgaemJRP3cX5sDRV35WbBFkRX-Y_SlvWdHdHapBv5Rrctin-vDbjA_JleygXNPO94vibp"/>
+                        </div>
+                        <div class="absolute bottom-2 right-2 bg-[#ffd166] text-[#3f2e00] p-2 rounded-full shadow-lg">
+                            <span class="material-symbols-outlined text-[20px] font-bold">verified</span>
+                        </div>
+                    </div>
+                    <div class="flex-1 pb-4 animate-fade-in">
+                        <h1 class="font-display-lg text-[40px] md:text-display-lg text-primary mb-1">Alex Rivera</h1>
+                        <p class="font-title-md text-title-md text-on-surface-variant flex items-center gap-2">
+                            <span class="material-symbols-outlined">location_on</span> Los Angeles, CA
+                        </p>
+                    </div>
+                    <div class="flex gap-4 pb-4">
+                        <button onclick="openContactModal()" class="bg-[#ffd166] text-[#3f2e00] px-8 py-4 rounded-xl font-label-caps text-label-caps font-bold hover:scale-105 active:scale-95 transition-all flex items-center gap-2 premium-shadow">
+                            <span class="material-symbols-outlined">mail</span> CONTACT AGENT
+                        </button>
+                        <button class="glass-panel text-primary p-4 rounded-xl hover:bg-white/10 transition-all" data-action="share">
+                            <span class="material-symbols-outlined">share</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content Grid -->
+        <section class="max-w-max-width mx-auto px-container-padding py-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+                <!-- Left Column: Details & Bio -->
+                <div class="lg:col-span-4 space-y-gutter">
+                    <!-- Physical Attributes -->
+                    <div class="glass-panel p-8 rounded-2xl animate-fade-in">
+                        <h3 class="font-label-caps text-label-caps text-primary border-b border-white/5 pb-4 mb-6">PHYSICAL STATS</h3>
+                        <div class="grid grid-cols-2 gap-y-6">
+                            <div>
+                                <p class="text-on-surface-variant font-label-caps text-[10px] uppercase tracking-widest">Height</p>
+                                <p class="font-title-md text-title-md">6'1" (185cm)</p>
+                            </div>
+                            <div>
+                                <p class="text-on-surface-variant font-label-caps text-[10px] uppercase tracking-widest">Weight</p>
+                                <p class="font-title-md text-title-md">185 lbs</p>
+                            </div>
+                            <div>
+                                <p class="text-on-surface-variant font-label-caps text-[10px] uppercase tracking-widest">Eyes</p>
+                                <p class="font-title-md text-title-md">Hazel</p>
+                            </div>
+                            <div>
+                                <p class="text-on-surface-variant font-label-caps text-[10px] uppercase tracking-widest">Hair</p>
+                                <p class="font-title-md text-title-md">Dark Brown</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skills & Languages -->
+                    <div class="glass-panel p-8 rounded-2xl animate-fade-in" style="animation-delay: 0.2s">
+                        <h3 class="font-label-caps text-label-caps text-primary border-b border-white/5 pb-4 mb-6">SKILLS &amp; TALENTS</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <p class="text-on-surface-variant font-label-caps text-[10px] uppercase tracking-widest mb-3">Core Skills</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-secondary-container/50 text-on-surface px-3 py-1 rounded-full text-xs border border-white/5">Stage Combat</span>
+                                    <span class="bg-secondary-container/50 text-on-surface px-3 py-1 rounded-full text-xs border border-white/5">Method Acting</span>
+                                    <span class="bg-secondary-container/50 text-on-surface px-3 py-1 rounded-full text-xs border border-white/5">Improvisation</span>
+                                    <span class="bg-secondary-container/50 text-on-surface px-3 py-1 rounded-full text-xs border border-white/5">Horseback Riding</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="text-on-surface-variant font-label-caps text-[10px] uppercase tracking-widest mb-3">Languages</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-primary/5 text-primary px-3 py-1 rounded-full text-xs border border-primary/20">English (Native)</span>
+                                    <span class="bg-primary/5 text-primary px-3 py-1 rounded-full text-xs border border-primary/20">Spanish (Fluent)</span>
+                                    <span class="bg-primary/5 text-primary px-3 py-1 rounded-full text-xs border border-primary/20">French (Conversational)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="flex gap-4 animate-fade-in" style="animation-delay: 0.3s">
+                        <a class="flex-1 glass-panel py-4 flex flex-col items-center gap-1 rounded-xl hover:bg-white/5 transition-all text-center" href="#" onclick="showToast('Loading Alex\\'s IMDb Page...')">
+                            <span class="material-symbols-outlined text-primary">movie</span>
+                            <span class="font-label-caps text-[10px]">IMDb</span>
+                        </a>
+                        <a class="flex-1 glass-panel py-4 flex flex-col items-center gap-1 rounded-xl hover:bg-white/5 transition-all text-center" href="#" onclick="showToast('Loading Instagram Profile...')">
+                            <span class="material-symbols-outlined text-primary">photo_camera</span>
+                            <span class="font-label-caps text-[10px]">INSTAGRAM</span>
+                        </a>
+                        <a class="flex-1 glass-panel py-4 flex flex-col items-center gap-1 rounded-xl hover:bg-white/5 transition-all text-center" href="#" onclick="showToast('Loading TikTok Profile...')">
+                            <span class="material-symbols-outlined text-primary">videocam</span>
+                            <span class="font-label-caps text-[10px]">TIKTOK</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Media & Portfolio -->
+                <div class="lg:col-span-8 space-y-gutter">
+                    <!-- Demo Reel Video Player -->
+                    <div class="glass-panel p-4 rounded-2xl animate-fade-in" style="animation-delay: 0.1s">
+                        <div class="relative aspect-video rounded-xl overflow-hidden bg-surface-container-highest group">
+                            <!-- Background still -->
+                            <div id="video-cover" class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 z-0" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBCed_SMpt74szzhy2mgrhXBlhcJqLzM_6W35lW8lxLA_enJI1xEJyZMZtNYgGsKlLJenMwFKstPsVOfohvfuvDn6VQ_XzFxoKi-GykQW7c52v_oJDnE3pnvlTciV9c-753IC3p7j4aPwVCWMHw5IlSbr9f_b8L4vGqdEPcVv37u9FUX-S_xM3sNHbFumVCC8mfc0DbC-j3550KSqZPCagX_HljPA_cMSyNx9q-VVsiLcdyHoaqRFZh8CiKcYJOl5oM_l9MSzAF_WLF')"></div>
+                            
+                            <!-- Video overlay element -->
+                            <div id="mock-video-player" class="absolute inset-0 bg-black z-0 opacity-0 transition-opacity flex items-center justify-center">
+                                <!-- Pulsing bars representing dynamic audio/video playing -->
+                                <div class="flex items-center gap-1">
+                                    <span class="w-1.5 h-8 bg-[#ffd166] rounded animate-pulse"></span>
+                                    <span class="w-1.5 h-12 bg-[#ffd166] rounded animate-pulse" style="animation-delay: 0.1s"></span>
+                                    <span class="w-1.5 h-16 bg-[#ffd166] rounded animate-pulse" style="animation-delay: 0.2s"></span>
+                                    <span class="w-1.5 h-10 bg-[#ffd166] rounded animate-pulse" style="animation-delay: 0.3s"></span>
+                                    <span class="w-1.5 h-6 bg-[#ffd166] rounded animate-pulse" style="animation-delay: 0.4s"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="absolute inset-0 bg-black/40 flex items-center justify-center z-10" id="play-button-overlay">
+                                <button onclick="toggleMockVideo()" class="w-20 h-20 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center hover:scale-110 transition-transform premium-shadow">
+                                    <span id="play-icon" class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                                </button>
+                            </div>
+                            
+                            <!-- Video Controls Overlay -->
+                            <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/80 to-transparent flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity z-20">
+                                <div class="w-full bg-white/20 h-1 rounded-full overflow-hidden">
+                                    <div id="video-progress" class="bg-[#ffd166] h-full w-0 transition-all duration-300"></div>
+                                </div>
+                                <div class="flex justify-between items-end">
+                                    <div>
+                                        <h4 class="font-title-md text-title-md text-white">2026 Drama Reel</h4>
+                                        <p class="text-xs text-white/60">Updated 2 months ago • <span id="video-time">0:00</span> / 2:45</p>
+                                    </div>
+                                    <span class="material-symbols-outlined text-white cursor-pointer" onclick="showToast('Fullscreen mock activated')">fullscreen</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience / Resume Area -->
+                    <div class="glass-panel p-8 rounded-2xl animate-fade-in" style="animation-delay: 0.2s">
+                        <div class="flex justify-between items-center mb-8">
+                            <h3 class="font-headline-lg text-headline-lg text-primary">Experience</h3>
+                            <button onclick="window.print()" class="flex items-center gap-2 text-primary hover:underline font-label-caps text-label-caps">
+                                <span class="material-symbols-outlined">download</span> PRINT / DOWNLOAD RESUME
+                            </button>
+                        </div>
+                        <div class="space-y-8">
+                            <!-- Work Entry 1 -->
+                            <div class="flex gap-6 group">
+                                <div class="w-16 h-16 bg-surface-container-high rounded-lg flex items-center justify-center flex-shrink-0 border border-white/5 transition-colors group-hover:bg-primary/10">
+                                    <span class="material-symbols-outlined text-primary text-3xl">theaters</span>
+                                </div>
+                                <div class="flex-1 border-b border-white/5 pb-6">
+                                    <div class="flex justify-between items-start mb-1">
+                                        <h4 class="font-title-md text-title-md">The Obsidian Horizon</h4>
+                                        <span class="text-on-surface-variant font-label-caps text-xs">FEATURE FILM • 2026</span>
+                                    </div>
+                                    <p class="text-primary/80 font-body-lg text-body-lg mb-2">Lead Role: Kaelen Vance</p>
+                                    <p class="text-on-tertiary-container font-body-sm text-body-sm italic">Directed by Marcus Vane, StarLaunch Productions</p>
+                                </div>
+                            </div>
+                            <!-- Work Entry 2 -->
+                            <div class="flex gap-6 group">
+                                <div class="w-16 h-16 bg-surface-container-high rounded-lg flex items-center justify-center flex-shrink-0 border border-white/5 transition-colors group-hover:bg-primary/10">
+                                    <span class="material-symbols-outlined text-primary text-3xl">theaters</span>
+                                </div>
+                                <div class="flex-1 border-b border-white/5 pb-6">
+                                    <div class="flex justify-between items-start mb-1">
+                                        <h4 class="font-title-md text-title-md">The Last Horizon</h4>
+                                        <span class="text-on-surface-variant font-label-caps text-xs">FEATURE FILM • 2024</span>
+                                    </div>
+                                    <p class="text-primary/80 font-body-lg text-body-lg mb-2">Lead Role: Det. Marcus Thorne</p>
+                                    <p class="text-on-tertiary-container font-body-sm text-body-sm italic">Directed by Sarah Jenkins, Warner Bros. Studios</p>
+                                </div>
+                            </div>
+                            <!-- Work Entry 3 -->
+                            <div class="flex gap-6 group">
+                                <div class="w-16 h-16 bg-surface-container-high rounded-lg flex items-center justify-center flex-shrink-0 border border-white/5 transition-colors group-hover:bg-primary/10">
+                                    <span class="material-symbols-outlined text-primary text-3xl">tv_gen</span>
+                                </div>
+                                <div class="flex-1 border-b border-white/5 pb-6">
+                                    <div class="flex justify-between items-start mb-1">
+                                        <h4 class="font-title-md text-title-md">Neon City Nights</h4>
+                                        <span class="text-on-surface-variant font-label-caps text-xs">TV SERIES • 2023-24</span>
+                                    </div>
+                                    <p class="text-primary/80 font-body-lg text-body-lg mb-2">Recurring Guest: Leo Vance (6 Episodes)</p>
+                                    <p class="text-on-tertiary-container font-body-sm text-body-sm italic">Showrunner: David Miller, HBO Max</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="w-full mt-6 py-4 border border-white/10 rounded-xl text-on-surface-variant font-label-caps hover:bg-white/5 transition-all" onclick="showToast('Full filmography credits loaded.')">VIEW FULL CREDITS</button>
+                    </div>
+
+                    <!-- Portfolio Gallery Bento Grid -->
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 animate-fade-in" style="animation-delay: 0.3s">
+                        <div class="aspect-square rounded-2xl overflow-hidden glass-panel group relative cursor-pointer" onclick="showToast('Expanding photo gallery image 1...')">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOKwFGv55gcutQ5t1p_eYKWMPBuw0wJeJ9yssDbvEOxyNrGb_H6RQxZbSCjX6rGipI2hRzPZVcwbafqgOnuprl8y5q1q2tnJEMDuzUm96FNzLRGNXveRVx1Eq1mLpB41EiQJWikMS0xYAyNDmSPOUUvp1LuFHBeBhVbfh-npUVbc0SDrxfIpD9rF59Gl-gqoTS0fYgtlLB0EBOC0h7AdjoI4dVnsAHo9OjqGmHfCEgYB9tlxDDTEnJilGT2hoKryfVBSDIRQveqDXB"/>
+                            <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <span class="material-symbols-outlined text-white text-3xl">zoom_in</span>
+                            </div>
+                        </div>
+                        <div class="aspect-square rounded-2xl overflow-hidden glass-panel group relative cursor-pointer" onclick="showToast('Expanding photo gallery image 2...')">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAb-JXotk3kDT-ZcYDi-n0plPcFYgH8mXnMSK08YXobj97BdulEMGuSECm8BYZQouR8yqgzxHx0PdbWn61Vw7yFJOQ9XHcoP1nQLtbmqfgYdi9dtgp7nwrLx-aVZ5qhYZcDlg1S03K7_ssBT0txiXoSU9Q44f2CPR36OCvh44b4-n8icnqP4TWG6Vyo7B4K2sEGiLQi0SRYhODj3MewisBEXVo_fE2wbjo1kSlEhosHoDhhdsDQR_EoRVks9NHrqkVHB12_dqw-U7Pi"/>
+                            <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <span class="material-symbols-outlined text-white text-3xl">zoom_in</span>
+                            </div>
+                        </div>
+                        <div class="aspect-square md:row-span-2 md:aspect-auto rounded-2xl overflow-hidden glass-panel group relative cursor-pointer" onclick="showToast('Expanding photo gallery image 3...')">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-kw0T5whnNXxtZwUTmUlU-CPWZ6fYUHLyjRzm3tL96NXmFJ8as5caQSnKyHqwyJ9RjcWMp_L2UlwFnvOZA96nPZSnWUoWHPPLVuhD1dR-v4IfDcUWcpSko-k2vb_jdkSpBkv2dNgRxbWKZ16zxfHImMnffm_d_8BP9bRXIEO2TOxKMDQPJgIF3hPyvpmHT1pyKqqZdxxxFhGRpz61Xg_3q8ZdgGrQ_zh2flEx6dT7CCtr3AaQs08EU0umBR1m9fttjqN3UUeo0cec"/>
+                            <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <span class="material-symbols-outlined text-white text-3xl">zoom_in</span>
+                            </div>
+                        </div>
+                        <div class="aspect-square rounded-2xl overflow-hidden glass-panel group relative cursor-pointer" onclick="showToast('Expanding photo gallery image 4...')">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrS7Kkn0Bg8cJux42Q2COOFjirn_3ITDWZicksWsne2cy3iLmsjWz8_dUdBrBfkreXDvS81iiNtRrPkcOBWBWlk3XPMAficEy_ZJGRbxcBgwHko2RtRzqG_irM1Wyco8OFPJFzPDKnMf5Q9k73k5cbQkUMp8ttcTxHNb9_dPkXdZ6_1cYjdU4E75-oFBWcdSmefLP8IBslHqWwjKR9qrmi5bfsOQO_kGoLHhMTbdCVxIgf-SkpBWbV_E1AMFdOPMl_vUp0dOZZ4nn9"/>
+                            <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <span class="material-symbols-outlined text-white text-3xl">zoom_in</span>
+                            </div>
+                        </div>
+                        <div class="aspect-square rounded-2xl overflow-hidden glass-panel group relative cursor-pointer" onclick="showToast('Expanding photo gallery image 5...')">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcTtu3TI0FLzbM6t17n7g7Lgewu7ZASdz93LKq1GE__v1HfqbPohn3_PLOQCRDHTQokr3IwrTqHAhIVhhbxLdmpkfhvnRpSF-jMteLCNCBSCVG4qVv6F8-wi59CzcZCmDJNrUin2w6FgdWQ7xtghacxriNKUeR0NCOn1mEjoxF2u9LSSPNekrmGkhZWR1Z9OynP55ez3VeoDqBgYCa9JQxVkjQ5NeeAydPVUMUpWw6hCE2-hHvSd_BUjJioajW0Z2_uybeDodfcNnX"/>
+                            <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <span class="material-symbols-outlined text-white text-3xl">zoom_in</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#131313] border-t border-surface-container-highest w-full py-margin-desktop mt-20">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-container-padding max-w-max-width mx-auto">
+            <div class="md:col-span-1">
+                <div class="font-headline-lg text-headline-lg text-primary mb-4">StarLaunch</div>
+                <p class="font-body-sm text-body-sm text-on-tertiary-container mb-6 italic">© 2026 StarLaunch. Cinematic Excellence.</p>
+            </div>
+            <div class="flex flex-col gap-3">
+                <h5 class="font-label-caps text-label-caps text-primary mb-2">PLATFORM</h5>
+                <a class="font-body-sm text-body-sm text-on-tertiary-container hover:text-on-surface transition-colors" href="index.html#featured-auditions">Find Auditions</a>
+                <a class="font-body-sm text-body-sm text-on-tertiary-container hover:text-on-surface transition-colors" href="index.html#categories">Talent Scouts</a>
+                <a class="font-body-sm text-body-sm text-on-tertiary-container hover:text-on-surface transition-colors" href="index.html#success-stories">Success Stories</a>
+            </div>
+            <div class="flex flex-col gap-3">
+                <h5 class="font-label-caps text-label-caps text-primary mb-2">RESOURCES</h5>
+                <a class="font-body-sm text-body-sm text-on-tertiary-container hover:text-on-surface transition-colors" href="#">Privacy Policy</a>
+                <a class="font-body-sm text-body-sm text-on-tertiary-container hover:text-on-surface transition-colors" href="#">Terms of Service</a>
+                <a class="font-body-sm text-body-sm text-on-tertiary-container hover:text-on-surface transition-colors" href="#">Support</a>
+            </div>
+            <div class="flex flex-col gap-3">
+                <h5 class="font-label-caps text-label-caps text-primary mb-2">NEWSLETTER</h5>
+                <p class="font-body-sm text-body-sm text-on-tertiary-container mb-4">Get the latest casting calls in your inbox.</p>
+                <div class="flex bg-surface-container rounded-lg overflow-hidden border border-white/5">
+                    <input class="bg-transparent border-none focus:ring-0 text-sm px-4 py-2 w-full text-white" placeholder="Email address" type="email"/>
+                    <button class="bg-primary-container text-on-primary-container px-4 py-2" onclick="showToast('Subscribed!')">
+                        <span class="material-symbols-outlined">send</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Agent Modal -->
+    <div id="contact-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="glass-card w-full max-w-md p-8 rounded-[32px] transform scale-95 transition-transform duration-300 relative border border-white/10 gold-glow">
+            <button onclick="closeContactModal()" class="absolute top-6 right-6 text-on-surface-variant hover:text-white transition-colors">
+                <span class="material-symbols-outlined text-2xl">close</span>
+            </button>
+            <h2 class="font-headline-lg text-headline-lg text-white mb-2">Contact <span class="text-primary-container">Alex's Agent</span></h2>
+            <p class="font-body-sm text-body-sm text-on-surface-variant mb-6">Send a direct inquiries proposal to United Talent Agency.</p>
+            
+            <form class="space-y-4" onsubmit="handleContactSubmit(event)">
+                <div>
+                    <label class="block font-label-caps text-label-caps text-on-surface-variant mb-1">YOUR NAME</label>
+                    <input required id="c-name" class="w-full bg-[#1c1b1b] border border-white/15 rounded-xl px-4 py-3 text-body-sm text-on-surface focus:ring-1 focus:ring-primary-container" placeholder="e.g. Elena Rodriguez" type="text"/>
+                </div>
+                <div>
+                    <label class="block font-label-caps text-label-caps text-on-surface-variant mb-1">PROJECT NAME / PRODUCTION HOUSE</label>
+                    <input required id="c-project" class="w-full bg-[#1c1b1b] border border-white/15 rounded-xl px-4 py-3 text-body-sm text-on-surface focus:ring-1 focus:ring-primary-container" placeholder="e.g. Studio X Casting" type="text"/>
+                </div>
+                <div>
+                    <label class="block font-label-caps text-label-caps text-on-surface-variant mb-1">PROPOSAL BRIEF</label>
+                    <textarea required id="c-message" class="w-full bg-[#1c1b1b] border border-white/15 rounded-xl px-4 py-3 text-body-sm text-on-surface h-24 focus:ring-1 focus:ring-primary-container" placeholder="Detail the role, budget and timeline..."></textarea>
+                </div>
+                <button type="submit" class="w-full bg-[#ffd166] text-[#3f2e00] py-4 rounded-xl font-label-caps text-label-caps font-bold hover:brightness-110 active:scale-95 transition-all flex items-center justify-center gap-2">
+                    <span class="material-symbols-outlined">send</span> SEND PROPOSAL
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+    <script>
+        // Check current user state to configure dashboard redirection
+        function configureNav() {
+            const role = StarLaunchDB.getCurrentUser();
+            const btn = document.getElementById("nav-dashboard-btn");
+            if (role === "casting_director") {
+                btn.innerText = "CASTING DASHBOARD";
+            } else {
+                btn.innerText = "ACTOR DASHBOARD";
+            }
+        }
+
+        function goBackToDashboard() {
+            const role = StarLaunchDB.getCurrentUser();
+            if (role === "casting_director") {
+                window.location.href = "casting-dashboard.html";
+            } else {
+                window.location.href = "actor-dashboard.html";
+            }
+        }
+
+        // Contact Modal Logic
+        function openContactModal() {
+            const modal = document.getElementById("contact-modal");
+            modal.classList.remove("pointer-events-none");
+            modal.classList.add("opacity-100");
+            modal.querySelector(".glass-card").classList.remove("scale-95");
+            modal.querySelector(".glass-card").classList.add("scale-100");
+        }
+
+        function closeContactModal() {
+            const modal = document.getElementById("contact-modal");
+            modal.classList.add("pointer-events-none");
+            modal.classList.remove("opacity-100");
+            modal.querySelector(".glass-card").classList.add("scale-95");
+            modal.querySelector(".glass-card").classList.remove("scale-100");
+        }
+
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById("c-name").value;
+            showToast(`Proposal sent successfully by ${name}!`);
+            closeContactModal();
+            e.target.reset();
+        }
+
+        // Mock Video Player Controller
+        let isPlaying = false;
+        let playInterval;
+        let progress = 0;
+        
+        function toggleMockVideo() {
+            const cover = document.getElementById("video-cover");
+            const player = document.getElementById("mock-video-player");
+            const playIcon = document.getElementById("play-icon");
+            const progressBar = document.getElementById("video-progress");
+            const timeSpan = document.getElementById("video-time");
+
+            isPlaying = !isPlaying;
+
+            if (isPlaying) {
+                // Play video
+                cover.style.opacity = "0";
+                player.style.opacity = "1";
+                playIcon.innerText = "pause";
+                showToast("Playing Alex Rivera's Drama Reel...");
+
+                playInterval = setInterval(() => {
+                    progress += 1;
+                    if (progress > 100) {
+                        progress = 0;
+                        isPlaying = false;
+                        clearInterval(playInterval);
+                        cover.style.opacity = "1";
+                        player.style.opacity = "0";
+                        playIcon.innerText = "play_arrow";
+                        progressBar.style.width = "0%";
+                        timeSpan.innerText = "0:00";
+                        showToast("Drama Reel finished.");
+                        return;
+                    }
+                    progressBar.style.width = `${progress}%`;
+                    
+                    // Calc current time based on 2:45 total duration (165 seconds)
+                    const currentSeconds = Math.floor((progress / 100) * 165);
+                    const minutes = Math.floor(currentSeconds / 60);
+                    const seconds = currentSeconds % 60;
+                    timeSpan.innerText = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+                }, 300);
+            } else {
+                // Pause video
+                clearInterval(playInterval);
+                playIcon.innerText = "play_arrow";
+                showToast("Video paused.");
+            }
+        }
+
+        // Scroll listener for nav transitions
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('h-16');
+                nav.classList.remove('h-20');
+            } else {
+                nav.classList.add('h-20');
+                nav.classList.remove('h-16');
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            configureNav();
+        });
+    </script>
+</body>
+</html>
